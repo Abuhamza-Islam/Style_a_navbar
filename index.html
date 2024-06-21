@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   <script src="https://kit.fontawsome.com/a076d05399.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <title>Coding2go</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            /* box-sizing: border-box; */
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        body,html{
+            width: 100%;
+            height: 100%;
+        }
+        #check{
+            display: none;
+        }
+        #check:checked ~ ul{
+                left: 0;
+        }
+        #check-btn{
+            float: right;
+            line-height: 80px;
+            margin-right: 10px;
+            font-size: 30px;
+            color: white;
+            display: none;
+        }
+        nav{
+
+            width: 100%;
+            height: 80px;
+            background-color: rgb(179, 232, 31);
+
+        }
+        label.logo{
+            font-size: 35px;
+            color: white;
+            margin:0 100px;
+            line-height: 80px;
+        }
+        nav ul{
+            float: right;
+            list-style-type: none;
+           
+        }
+        nav ul li{
+              display: inline-block;
+              line-height: 80px;
+              /* background-color: green; */
+        }
+        nav ul li a{
+            text-decoration: none;
+            font-size: 20px;
+            text-transform: capitalize;
+            padding: 8px 20px;
+        }
+
+        nav ul li a.active,a:hover{
+            background-color: green;
+
+        }
+
+
+        /* responsive */
+        @media screen and (max-width:400px) {
+            label.logo{
+            font-size: 25px;
+            margin: 0 50px;
+        }
+           }
+        @media screen and (max-width:576px) {
+           #check-btn{
+            display: block;
+           }
+           label.logo{
+            margin: 0 70px;
+        }
+           nav ul{
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            top: 80px;
+            left: -100%;
+            transition: 0.5s;
+           }
+
+           nav ul li{
+            display: block;
+            text-align: center;
+            line-height: 40px;
+            margin: 10px;        
+           }
+
+        
+        }
+      
+    </style>
+</head>
+<body>
+    <nav>
+
+        <input type="checkbox" name="" id="check">
+        <label for="check" id="check-btn"><i class="fa fa-bars"></i></label>
+
+       <label class="logo">Heavy coder</label>
+        <ul>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Contacts</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
